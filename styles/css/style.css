@@ -2,72 +2,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700;900&display=swap");
 
 .nav-link {
-  color: white !important;
+    color: white !important;
 }
 
 .navbar {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  font-family: "Ubuntu", sans-serif;
-  z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    z-index: 1;
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .container-main {
-  margin-top: 100px !important;
-  margin-left: 15%;
-  margin-right: 20%;
+    margin-top: 100px !important;
 }
 
 .container-secondary {
-  margin-bottom: 50px;
-  padding: 10px;
+    margin-bottom: 50px;
+    padding: 10px;
+    text-align: center;
 }
 .main-functions {
-  margin: 15px;
-  box-shadow: 5px 7px 5px rgba(100, 0, 0, 0.5);
-  transition: box-shadow 0.5s;
-  font-family: "Muli", sans-serif;
-  font-weight: 700;
-  min-height: 350px;
+    margin: 15px;
+    box-shadow: 5px 7px 5px rgba(100, 0, 0, 0.5);
+    transition: box-shadow 0.5s;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    min-height: 350px;
 }
-h4 {
-  font-family: "Muli", sans-serif;
-  font-size: 30px;
+.index-heading {
+    font-family: "Muli", sans-serif;
+    font-size: 30px;
 }
-h5 {
-  padding: 10px;
-  font-weight: 900;
+.tiles-label {
+    padding: 10px;
+    font-weight: 900;
 }
 
 img {
-  padding-top: 10px;
-  padding-left: 30%;
+    padding-top: 10px;
+    padding-left: 30%;
 }
 
 .main-functions:hover {
-  box-shadow: 5px 7px 20px rgba(200, 0, 0, 0.5);
+    box-shadow: 5px 7px 20px rgba(200, 0, 0, 0.5);
 }
 
 .comp-chart {
-  border: 1px solid black;
-  font-family: "Muli", sans-serif;
-  font-size: 20px;
-  text-align: center;
+    border: 1px solid black;
+    font-family: "Muli", sans-serif;
+    font-size: 20px;
+    text-align: center;
 }
 
 .about-us {
-  text-align: center;
-  min-height: 10px;
+    text-align: center;
+    min-height: 10px;
+}
+.container-aboutus {
+    margin-top: 20%;
+}
+.names {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 30px;
+    box-shadow: 5px 7px 5px rgba(100, 0, 0, 0.5);
+    margin: 10px;
+    transition: box-shadow 0.5s;
+}
+
+.names:hover {
+    box-shadow: 5px 7px 20px rgba(200, 0, 0, 0.5);
+}
+
+.map {
+    margin-top: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border: 3px solid black;
+    display: block;
+    padding: 5px;
+}
+
+.contact-info {
+    float: left;
+    margin-top: 120px;
+    padding: 150px;
+    display: inline-block;
+}
+
+.youtube-video {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border: 1px solid black;
+    display: block;
+    padding: 10px;
 }
