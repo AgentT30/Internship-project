@@ -112,3 +112,14 @@ img {
     display: block;
     padding: 10px;
 }
+
+.container-admin-login {
+    align-content: center;
+    margin-top: 150px;
+    margin-left: 30%;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 5px 5px 15px rgba(100, 0, 0, 0.5);
+}
