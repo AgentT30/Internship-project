@@ -131,3 +131,8 @@ img {
     margin-left: 35%;
     box-shadow: 2px 3px 5px rgba(100, 0, 0, 0.5);
 }
+
+.form-buttons {
+    margin-top: 40px;
+    box-shadow: 2px 3px 5px rgba(100, 0, 0, 0.5);
+}
