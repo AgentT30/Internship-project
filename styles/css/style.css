@@ -39,7 +39,7 @@
     transition: box-shadow 0.5s;
     font-family: "Muli", sans-serif;
     font-weight: 700;
-    min-height: 350px;
+    min-height: 500px;
 }
 .index-heading {
     font-family: "Muli", sans-serif;
@@ -122,4 +122,9 @@ img {
     border-radius: 10px;
     display: inline-block;
     box-shadow: 5px 5px 15px rgba(100, 0, 0, 0.5);
+}
+
+.req-button {
+    margin-left: 35%;
+    box-shadow: 2px 3px 5px rgba(100, 0, 0, 0.5);
 }
