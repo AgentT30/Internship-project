@@ -24,6 +24,7 @@
   color: white;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
+  z-index: 1;
 }
 
 .container-main {
@@ -74,7 +75,9 @@ img {
   min-height: 10px;
 }
 .container-aboutus {
-  margin-top: 20%;
+  margin-top: 10%;
+  margin-bottom: 7%;
+  margin-left: 5% !important;
 }
 .names {
   border: 1px solid black;
@@ -83,6 +86,7 @@ img {
   box-shadow: 5px 7px 5px rgba(100, 0, 0, 0.5);
   margin: 10px;
   transition: box-shadow 0.5s;
+  border-radius: 10px;
 }
 
 .names:hover {
@@ -91,20 +95,9 @@ img {
 
 .map {
   margin-top: 170px;
-  /* margin-left: auto;
-    margin-right: auto; 
-    width: fit-content; */
-  /* border: 3px solid black; */
   margin-right: 150px;
   display: block;
   padding: 15px;
-}
-
-.contact-info {
-  margin-top: 350px;
-  /* float: left;   
-    padding: 150px;
-    display: inline-block; */
 }
 
 .youtube-video {
@@ -118,14 +111,14 @@ img {
 }
 
 .container-admin-login {
-  align-content: center;
   margin-top: 150px;
-  margin-left: 30%;
-  padding: 50px;
+  margin-left: 35%;
+  padding: 50px 50px 30px 50px;
   border: 1px solid black;
   border-radius: 10px;
   display: inline-block;
   box-shadow: 5px 5px 15px rgba(100, 0, 0, 0.5);
+  max-width: 400px;
 }
 
 .req-button {
