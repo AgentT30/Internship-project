@@ -10,10 +10,10 @@
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
             crossorigin="anonymous"
         />
-        <link rel="icon" href="images/blood-bank-logo.jpg">
+        <link rel="icon" href="images/blood-bank-logo.jpg" />
 
         <link rel="stylesheet" href="styles/css/style.css" />
-        <title>Reqeust</title>
+        <title>Donate</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger">
@@ -48,15 +48,15 @@
                 </ul>
                 <ul class="navbar-nav mr-right">
                     <li>
-                        <a class="nav-link" href="adminLogin.html" style="color: white;">Admin Login</a>
+                        <a class="nav-link" href="adminLogin.html" style="color: white;"
+                            >Admin Login</a
+                        >
                     </li>
                 </ul>
             </div>
         </nav>
-        
         <form>
             <div class="container container-main">
-                <h4 align="center" style="text-decoration: underline;" class="form-title">REQUEST FORM</h4>
                 <div class="form-row">
                     <div class="form-group col-lg-4">
                         <label class="font-weight-bold" style="color: #d9534f;">FIRST NAME:</label>
@@ -120,11 +120,19 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label class="font-weight-bold" style="color: #d9534f;" 
+                            >Last Donated Date:</label
+                        >
+                        <input type="date" name="date" required="" style="margin-left: 30px; margin-top: 25px;"/>
+                    </div>
+                </div>
+                <div class="form-row">
                     <div class="col-4">
                         <button class="btn btn-danger form-buttons">SUBMIT</button>
                     </div>
                     <div class="col-4">
-                        <button class="btn btn-danger form-buttons">CLEAR</button>
+                        <button class="btn btn-danger form-buttons" type="reset">CLEAR</button>
                     </div>
                     <div class="col-4">
                         <a href="index.html"><button class="btn btn-danger form-buttons">CLOSE</button></a>
@@ -132,6 +140,7 @@
                 </div>
             </div>
         </form>
+        
         
         <div class="footer bg-danger">
             <p style="padding: 5px 5px 1px 5px;">© 2020 DrizzleWebs</p>
