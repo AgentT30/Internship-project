@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
 
 .nav-link {
   color: white !important;
@@ -7,6 +8,7 @@
 .logo {
   border-radius: 100%;
 }
+
 .navbar {
   overflow: hidden;
   position: fixed;
@@ -15,7 +17,12 @@
   font-family: "Ubuntu", sans-serif;
   z-index: 1;
 }
-
+.heading {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  color: #d9534f;
+  text-shadow: 2px 2px 3px rgba(100, 0, 0, 0.5);
+}
 .footer {
   position: fixed;
   left: 0;
@@ -31,6 +38,9 @@
   margin-top: 100px !important;
 }
 
+.landing-page {
+  margin-top: 50px !important;
+}
 .container-secondary {
   margin-bottom: 50px;
   padding: 10px;
