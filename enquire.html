@@ -55,14 +55,14 @@
                 </ul>
             </div>
         </nav>
-        <form>
+        <form action="backend/enquire.php" method="GET">
             <h4 align="center" style="margin-top: 100px;">ENQUIRY FORM</h4>
             <div class="container-fluid container-form">
                 
                 <div class="form-row">
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">BLOOD TYPE:</label>
-                        <select class="custom-select">
+                        <select class="custom-select" name="bloodtype">
                             <option>O+</option>
                             <option>O-</option>
                             <option>A+</option>
@@ -80,10 +80,10 @@
                 </div>
                 <div class="form-row">
                     <div class="col-6" align="center">
-                        <button class="btn btn-danger form-buttons">CLEAR</button>
+                        <button type="reset" class="btn btn-danger form-buttons">CLEAR</button>
                     </div>
                     <div class="col-6" align="center">
-                        <button class="btn btn-danger form-buttons">SUBMIT</button>
+                        <button class="btn btn-danger form-buttons" name="submit-btn">SUBMIT</button>
                     </div>
                 </div>
             </div>
