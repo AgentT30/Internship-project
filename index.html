@@ -337,15 +337,15 @@
     </div>
     <hr>
 
-    <div class="container">
-      <form>
+    <div class="container" id="newsletter">
+      <form action="backend/newsletter.php" method="POST">
         <div class="form-row">
           <div class="form-group col col-lg-4 newsletter-label"><h4>Sign Up for our newsletter!</h4></div>
           <div class="form-group col col-lg-4 newsletter-label">
             <input type="email" name="newsletter-email" class="form-control" placeholder="Your email ID" size="50%">
           </div>
           <div class="form-group col col-lg-2 newsletter-label">
-            <button class="btn btn-danger form-buttons" style="margin-top: 0;">Submit</button>
+            <button class="btn btn-danger form-buttons" style="margin-top: 0;" name="submit-btn">Submit</button>
           </div>
         </div>
       </form>      
