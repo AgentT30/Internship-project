@@ -161,3 +161,9 @@ img {
     font-family: "Nunito", sans-serif;
     color: #d9534f;
 }
+
+.container-form {
+    margin-top: 30px !important;
+    display: block;
+    width: 50%;
+}

@@ -56,29 +56,30 @@
             </div>
         </nav>
         <form>
-            <div class="container container-main container-donate">
+            <h4 align="center" style="text-decoration: underline; margin-top: 100px;" class="form-title">DONATE FORM</h4>
+            <div class="container-fluid container-form">
                 <div class="form-row">
-                    <div class="form-group col-lg-4">
+                    <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">FIRST NAME:</label>
                         <input type="text" name="fname" required="" class="form-control" />
                     </div>
-                    <div class="form-group col-lg-4">
-                        <label class="font-weight-bold" style="color: #d9534f;">MIDDLE NAME:</label>
-                        <input type="text" name="mname" class="form-control" />
-                    </div>
-                    <div class="form-group col-lg-4">
+                    <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">LAST NAME:</label>
                         <input type="text" name="lname" class="form-control" />
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-lg-4">
-                        <label class="font-weight-bold" style="color: #d9534f;">AGE:</label>
-                        <input type="number" name="age" class="form-control" />
+                <div class="form-row">                    
+                    <div class="form-group col-lg-6">
+                        <label class="font-weight-bold" style="color: #d9534f;">E-MAIL:</label>
+                        <input type="email" name="e-mail" class="form-control" />
                     </div>
+                    <div class="form-group col-lg-6">
+                        <label class="font-weight-bold" style="color: #d9534f;">PHONE:</label>
+                        <input type="phonenumber" name="phone" class="form-control" />
+                    </div> 
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-lg-4">
+                    <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">BLOOD TYPE:</label>
                         <select class="custom-select">
                             <option>O+</option>
@@ -91,27 +92,27 @@
                             <option>AB-</option>
                         </select>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-lg-4">
-                        <label class="font-weight-bold" style="color: #d9534f;">E-MAIL:</label>
-                        <input type="email" name="e-mail" class="form-control" />
+                    <div class="form-group col-lg-6">
+                        <label class="font-weight-bold" style="color: #d9534f;">Last Donated Date:</label><br>
+                        <input type="date" name="date" required="" style="width: 100%; text-align: center; height: 54%;"/>
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-lg-4">
-                        <label class="font-weight-bold" style="color: #d9534f;">PHONE:</label>
-                        <input type="phonenumber" name="phone" class="form-control" />
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-lg-4">
+                    <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">ADDRESS:</label>
                         <input type="text" name="address" class="form-control" />
                     </div>
+                    <div class="form-group col-lg-6">
+                        <label class="font-weight-bold" style="color: #d9534f;">PIN:</label>
+                        <input type="text" name="pin" class="form-control" />
+                    </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-lg-4">
+                    <div class="form-group col-lg-6">
+                        <label class="font-weight-bold" style="color: #d9534f;">AGE:</label>
+                        <input type="number" name="age" class="form-control" />
+                    </div>
+                    <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">GENDER:</label>
                         <select class="custom-select">
                             <option>MALE</option>
@@ -119,24 +120,14 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-lg-4">
-                        <label class="font-weight-bold" style="color: #d9534f;" 
-                            >Last Donated Date:</label
-                        >
-                        <input type="date" name="date" required="" style="margin-left: 30px; margin-top: 25px;"/>
-                    </div>
-                </div>
+                
                 <div class="form-row" style="margin-bottom: 75px;">
-                    <div class="col-4">
-                        <button class="btn btn-danger form-buttons">SUBMIT</button>
-                    </div>
-                    <div class="col-4">
+                    <div class="col-6" align="center">
                         <button class="btn btn-danger form-buttons" type="reset">CLEAR</button>
                     </div>
-                    <div class="col-4">
-                        <a href="index.html"><button class="btn btn-danger form-buttons">CLOSE</button></a>
-                    </div>
+                    <div class="col-6" align="center">
+                        <button class="btn btn-danger form-buttons">SUBMIT</button>
+                    </div>                    
                 </div>
             </div>
         </form>
