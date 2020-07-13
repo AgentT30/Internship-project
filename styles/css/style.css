@@ -88,16 +88,19 @@ img {
 .container-aboutus {
     margin-top: 10%;
     margin-bottom: 7%;
-    margin-left: 5% !important;
+    margin-left: 20% !important;
+    display: inline-block;
 }
 .names {
     border: 1px solid black;
     display: inline-block;
-    padding: 30px;
+    padding: 20px 0px 20px 5px;
     box-shadow: 5px 7px 5px rgba(100, 0, 0, 0.5);
-    margin: 10px;
+    margin: 8px;
     transition: box-shadow 0.5s;
     border-radius: 10px;
+    text-align: center;
+    width: 10%;
 }
 
 .names:hover {
