@@ -87,9 +87,6 @@ img {
 }
 .container-aboutus {
     margin-top: 10%;
-    margin-bottom: 7%;
-    margin-left: 20% !important;
-    display: inline-block;
 }
 .names {
     border: 1px solid black;
@@ -156,7 +153,7 @@ img {
 }
 
 .faq-answer {
-    color: #d9534f;
+    color: black !important;
     font-family: "Nunito", sans-serif;
 }
 
