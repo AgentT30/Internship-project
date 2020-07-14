@@ -13,7 +13,7 @@
         <link rel="icon" href="../images/blood-bank-logo.jpg" />
 
         <link rel="stylesheet" href="../styles/css/style.css" />
-        <title>Confirm Request</title>
+        <title>Donate Ticket</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger">
@@ -87,8 +87,19 @@
                                 // echo $pin_code.'<br>';
                                 // echo $age.'<br>';
                                 // echo $gender.'<br>';
+                                $connection = mysqli_connect("localhost","root","","bloodbank");
 
-                                $ticket = "REQ100001";
+                                $query = "INSERT into donors (first_name, last_name, email, phone, blood, last_date, user_address, city, age, gender) values ('$first_name','$last_name','$email','$phone','$blood','$last_date','$address','$city','$age','$gender')";
+
+                                $result = mysqli_query($connection, $query);
+
+                                $get_ticket_num = "SELECT did from donors order by did desc";
+                                $result = mysqli_query($connection, $get_ticket_num);
+                                $row = mysqli_fetch_assoc($result);
+
+                                $ticket_num = $row['did'];
+
+                                $ticket = "DNT10000".$ticket_num;                                
                                 echo '<p>Thank you for the interest in donating! Here is your ticket:<br>'.$ticket.'</p>';
                         }
                         else{

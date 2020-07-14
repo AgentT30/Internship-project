@@ -19,3 +19,8 @@ echo var_dump($num);
 echo '<br>';
 $numtoStr = (string)$num;
 echo 'DNT'.$numtoStr;
+
+
+
+
+INSERT INTO `blood_storage` (`bid`, `blood_type`, `amount`, `city`) VALUES (NULL, 'O+', '50', 'Pune'), (NULL, 'O-', '50', 'Pune'), (NULL, 'A+', '50', 'Pune'), (NULL, 'A-', '50', 'Pune'), (NULL, 'B+', '50', 'Pune'), (NULL, 'B-', '50', 'Pune'), (NULL, 'AB+', '50', 'Pune'), (NULL, 'AB-', '50', 'Pune');

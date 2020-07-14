@@ -11,11 +11,13 @@
             crossorigin="anonymous"
         />
         <link rel="icon" href="images/blood-bank-logo.jpg">
+        
         <style>
             body{
               background-image: linear-gradient(180deg,#ffffff,#f5bac1);
             }
           </style>
+
         <link rel="stylesheet" href="styles/css/style.css" />
         <title>Reqeust</title>
     </head>
@@ -69,17 +71,17 @@
                     </div>
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">LAST NAME:</label>
-                        <input type="text" name="lname" class="form-control" />
+                        <input type="text" name="lname" required="" class="form-control" />
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">E-MAIL:</label>
-                        <input type="email" name="email" class="form-control" />
+                        <input type="email" name="email" required="" class="form-control" />
                     </div>
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">PHONE:</label>
-                        <input type="phonenumber" name="phone" class="form-control" />
+                        <input type="phonenumber" name="phone" maxlength="9" required="" class="form-control" />
                     </div>
                     
                 </div>
@@ -98,14 +100,14 @@
                         </select>
                     </div>
                     <div class="form-group col-lg-6">
-                        <label class="font-weight-bold" style="color: #d9534f;">AMOUNT:</label>
-                        <input type="number" name="amount" class="form-control" />
+                        <label class="font-weight-bold" style="color: #d9534f;">Units of Blood:</label>
+                        <input type="number" name="amount" required="" class="form-control" />
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">ADDRESS:</label>
-                        <input type="text" name="address" class="form-control" />
+                        <input type="text" name="address" required="" class="form-control" />
                     </div>
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">CITY:</label>
@@ -123,7 +125,7 @@
                 <div class="form-row">
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">AGE:</label>
-                        <input type="number" name="age" class="form-control" />
+                        <input type="number" name="age" required="" class="form-control" />
                     </div>
                     <div class="form-group col-lg-6">
                         <label class="font-weight-bold" style="color: #d9534f;">GENDER:</label>
@@ -148,4 +150,7 @@
             <p style="padding: 5px 5px 1px 5px;">© 2020 DrizzleWebs</p>
         </iframe>
     </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </html>

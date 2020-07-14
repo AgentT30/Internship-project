@@ -1,4 +1,4 @@
-d<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -13,7 +13,7 @@ d<!DOCTYPE html>
         <link rel="icon" href="../images/blood-bank-logo.jpg" />
 
         <link rel="stylesheet" href="../styles/css/style.css" />
-        <title>Details of Enquiry</title>
+        <title>Delete Donor Record</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger">
@@ -46,52 +46,34 @@ d<!DOCTYPE html>
                         >
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-right">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../adminLogin.html" style="color: white;"
-                            >Admin Login</a
-                        >
-                    </li>
-                </ul>
             </div>
-        </nav>
-        <form method="GET" action="../backend/request.php">
+        </nav>        
         <div class="container-fluid">
             <div class="row" style="margin-left: 30%; margin-top: 20%;">
                 <div class="col col-lr-12">
-                    
+                    <div
+                        class="alert alert-danger"
+                        role="alert"
+                        style="width: 50%; text-align: center;"">
                         <?php
-                                if(isset($_GET['submit-btn'])){
-                                    $type = $_GET['bloodtype'];
-                                    $amount = $_GET['amount'];
-                                    $city = $_GET['city'];
-                                    // Testing purposes
-                                    // echo $type;
-                                    // echo '<br>';
-                                    // echo $amount;
-
-                                    $connection = mysqli_connect("localhost","root","","bloodbank");
-
-                                    $query = "select * from blood_storage where blood_type ='".$type."' and amount > ".$amount." and city = '".$city."'";
-                                    $qryobj = mysqli_query($connection, $query);
-                                    $row = mysqli_fetch_assoc($qryobj);
-                                    if($row == null){
-                                        echo '<div class="alert alert-danger" role="alert"style="width: 50%; text-align: center;""><p>Unfortunately the requested amount of blood is not available in '.$city.'.</p></div>';
-                                    }
-                                    else{
-                                        echo '<div class="alert alert-success" role="alert" style="width: 50%; text-align: center;"">';
-                                        echo '<p>The blood type '.$type.' is available in '.$city.'.</p>';
-                                    }
-                                }
-                                else{
-                                    header("Location: ../enquire.html");
-                                } 
-                            ?>
-                                       
+                            $did = $_GET['did'];
+                    
+                            $connection = mysqli_connect("localhost","root","","bloodbank");
+                            $query = "DELETE from donors where did ='$did'";
+                            
+                            $qryobj = mysqli_query($connection, $query);                            
+                            
+                            if(isset($qryobj)){
+                                echo "Deleted!";
+                            }
+                            else{
+                                echo "Error deleting record.";
+                            }
+                        ?>
+                    </div>                    
                 </div>
             </div>
         </div>
-        </form>
         <div class="footer bg-danger">
             <p style="padding: 5px 5px 1px 5px;">© 2020 DrizzleWebs</p>
         </div>

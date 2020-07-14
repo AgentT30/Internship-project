@@ -84,7 +84,19 @@
                                 // echo $address.'<br>';
                                 // echo $pin_code.'<br>';
 
-                                $ticket = "REQ100001";
+                                $connection = mysqli_connect("localhost","root","","bloodbank");
+
+                                $query = "INSERT into requests (first_name, last_name, email, phone, blood, amount, user_address, city) values ('$first_name','$last_name','$email','$phone','$blood','$amount','$address','$city')";
+
+                                $result = mysqli_query($connection, $query);
+
+                                $get_ticket_num = "SELECT id from requests order by id desc";
+                                $result = mysqli_query($connection, $get_ticket_num);
+                                $row = mysqli_fetch_assoc($result);
+
+                                $ticket_num = $row['id'];
+
+                                $ticket = "REQ10000".$ticket_num;
                                 echo '<p>Thank you for the request! Here is your ticket:<br>'.$ticket.'</p>';
                             }
                             else{
