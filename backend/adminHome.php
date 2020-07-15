@@ -20,7 +20,7 @@
     </style>
     <title>Admin Home</title>
   </head>
-  <body>
+  <body>    
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
       <a class="navbar-brand" href="index.html"
         ><img
@@ -63,12 +63,40 @@
       </div>
     </nav>
 
+    
+    
     <div class="heading" style="margin-top: 100px;">
       <h1 align="center" class="heading">Admin Home</h1>
     </div>
     
+    <form action="adminHome.php" method="GET">
+      <div class="container">
+        <div class="row" >
+          <div class="col col-lg-6">
+            <button class="btn btn-danger" style="margin-left: 30%" name = "refresh">Refresh</button> 
+          </div> 
+          <div class="col col-lg-6">          
+            <button class="btn btn-danger" style="margin-left: 30%" name = "update">Update Records</button>
+          </div>
+        </div>
+      </div>
+    </form>
 
-    
+    <?php
+        if(isset($_GET['refresh'])){
+          header("Location:adminHome.php");
+        }
+    ?>
+
+    <?php
+      if(isset($_GET['update'])){
+        header("Location:adminupdate.php");
+      }
+    ?>
+
+    <form action="adminHome.php" method="GET">
+      
+    </form>
 
     <h2 align="center" style="color: #d9534f; margin-top: 50px; padding: 10px;" class="admin-page-heading">Details of Requesters:</h2>
     <div class="container" id="req" style="margin-bottom: 150px;">

@@ -76,14 +76,7 @@
                                 }
                                 else{
                                     echo 'Incorrect username or password!<br><br>';
-                                    echo '<a href="../adminLogin.html"><button class="btn btn-outline-secondary">Click to go back</button></a>';
-                                    // echo '<script>alert("Wrong username or password!")</script>';
-                                    // echo '<form action="newsletter.php" method="GET">';
-                                    // echo '<button class="backbutton" name="goback">Click here to go back</button>';
-                                    // echo '</form>';
-                                    // if(isset($_GET['goback'])){
-                                    //     header("Location:../adminLogin.html");
-                                    // }
+                                    echo '<a href="../adminLogin.html"><button class="btn btn-outline-secondary">Click to go back</button></a>';                                
                                 }
                             }
                         ?>

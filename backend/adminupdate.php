@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+d<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -101,36 +101,44 @@
                 </div>
             </div>
         </form>
+        <div class="container-fluid">
+            <div class="row" style="margin-left: 30%;">
+                <div class="col col-lr-12">
+                    <?php
+                        if(isset($_GET['sbtbtn'])){
+                            $city = $_GET['city'];
+                            $group = $_GET['bloodtype'];
+                            $amount_offset =$_GET['updateAmount'];
 
-        <?php
-            if(isset($_GET['sbtbtn'])){
-                $city = $_GET['city'];
-                $group = $_GET['bloodtype'];
-                $amount_offset =$_GET['updateAmount'];
+                            // echo $city.'<br>';
+                            // echo $group.'<br>';
+                            // echo var_dump($amount_offset);
+                            // $amount_offset = (int)$amount_offset;
+                            // echo var_dump($amount_offset);
+                            $connection = mysqli_connect("localhost","root","","bloodbank");
+                            $query = "UPDATE blood_storage SET amount = amount + '$amount_offset' where city = '$city' and blood_type = '$group'";                  
+                            
+                            if($connection->query($query) === TRUE){
+                                $sql = "SELECT amount FROM blood_storage where blood_type = '$group' and city = '$city'";
 
-                // echo $city.'<br>';
-                // echo $group.'<br>';
-                // echo var_dump($amount_offset);
-                // $amount_offset = (int)$amount_offset;
-                // echo var_dump($amount_offset);
-                $connection = mysqli_connect("localhost","root","","bloodbank");
-                $query = "UPDATE blood_storage set amount = amount + ".$amount_offset." where city = ".$city." and blood_type = ".$group."";
-
-                $result = mysqli_query($connection, $query);       
-                
-                if(isset($qryobj)){
-                    echo "Updated!";
-                }
-                else{
-                    echo "Error updating record.";
-                }
-
-            }            
-        ?>
-
-        <div class="footer bg-danger">
-            <p style="padding: 5px 5px 1px 5px;">© 2020 DrizzleWebs</p>
+                                $result = mysqli_query($connection, $sql);
+                                while($row = mysqli_fetch_assoc($result)){
+                                    echo '<div class="alert alert-success" role="alert" style="width: 50%; text-align: center;"">';
+                                    echo 'The amount has been increased to '.$row['amount'].'</div>';
+                                }
+                            }
+                            else{
+                                echo "Error updating record.";
+                            }
+                        }            
+                    ?>
+                </div>
+            </div>
         </div>
+
+    <div class="footer bg-danger">
+        <p style="padding: 5px 5px 1px 5px;">© 2020 DrizzleWebs</p>
+    </div>
     </body>
     <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
