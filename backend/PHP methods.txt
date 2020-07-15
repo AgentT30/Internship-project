@@ -23,4 +23,4 @@ echo 'DNT'.$numtoStr;
 
 
 
-INSERT INTO `blood_storage` (`bid`, `blood_type`, `amount`, `city`) VALUES (NULL, 'O+', '50', 'Pune'), (NULL, 'O-', '50', 'Pune'), (NULL, 'A+', '50', 'Pune'), (NULL, 'A-', '50', 'Pune'), (NULL, 'B+', '50', 'Pune'), (NULL, 'B-', '50', 'Pune'), (NULL, 'AB+', '50', 'Pune'), (NULL, 'AB-', '50', 'Pune');
+INSERT INTO `blood_storage` (`bid`, `blood_type`, `amount`, `city`) VALUES (NULL, 'O+', '50', 'Mangaluru'), (NULL, 'O-', '50', 'Mangaluru'), (NULL, 'A+', '50', 'Mangaluru'), (NULL, 'A-', '50', 'Mangaluru'), (NULL, 'B+', '50', 'Mangaluru'), (NULL, 'B-', '50', 'Mangaluru'), (NULL, 'AB+', '50', 'Mangaluru'), (NULL, 'AB-', '50', 'Mangaluru');

@@ -1,4 +1,4 @@
-d<!DOCTYPE html>
+bd<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -124,7 +124,8 @@ d<!DOCTYPE html>
                                 $result = mysqli_query($connection, $sql);
                                 while($row = mysqli_fetch_assoc($result)){
                                     echo '<div class="alert alert-success" role="alert" style="width: 50%; text-align: center;"">';
-                                    echo 'The amount has been increased to '.$row['amount'].'</div>';
+                                    echo 'The amount has been increased to '.$row['amount'].'</br>';
+                                    echo '<a href="adminHome.php"><button class="btn btn-outline-success">Click to go back</button></a></div>';
                                 }
                             }
                             else{

@@ -1,4 +1,4 @@
-d<!DOCTYPE html>
+dd<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -55,43 +55,44 @@ d<!DOCTYPE html>
                 </ul>
             </div>
         </nav>
-        <form method="GET" action="../backend/request.php">
+        
         <div class="container-fluid">
             <div class="row" style="margin-left: 30%; margin-top: 20%;">
                 <div class="col col-lr-12">
                     
                         <?php
-                                if(isset($_GET['submit-btn'])){
-                                    $type = $_GET['bloodtype'];
-                                    $amount = $_GET['amount'];
-                                    $city = $_GET['city'];
-                                    // Testing purposes
-                                    // echo $type;
-                                    // echo '<br>';
-                                    // echo $amount;
+                            if(isset($_GET['submit-btn'])){
+                                $type = $_GET['bloodtype'];
+                                $amount = $_GET['amount'];
+                                $city = $_GET['city'];
+                                // Testing purposes
+                                // echo $type;
+                                // echo '<br>';
+                                // echo $amount;
 
-                                    $connection = mysqli_connect("localhost","root","","bloodbank");
+                                $connection = mysqli_connect("localhost","root","","bloodbank");
 
-                                    $query = "select * from blood_storage where blood_type ='".$type."' and amount > ".$amount." and city = '".$city."'";
-                                    $qryobj = mysqli_query($connection, $query);
-                                    $row = mysqli_fetch_assoc($qryobj);
-                                    if($row == null){
-                                        echo '<div class="alert alert-danger" role="alert"style="width: 50%; text-align: center;""><p>Unfortunately the requested amount of blood is not available in '.$city.'.</p></div>';
-                                    }
-                                    else{
-                                        echo '<div class="alert alert-success" role="alert" style="width: 50%; text-align: center;"">';
-                                        echo '<p>The blood type '.$type.' is available in '.$city.'.</p>';
-                                    }
+                                $query = "select * from blood_storage where blood_type ='".$type."' and amount >= ".$amount." and city = '".$city."'";
+                                $qryobj = mysqli_query($connection, $query);
+                                $row = mysqli_fetch_assoc($qryobj);
+                                if($row == null){
+                                    echo '<div class="alert alert-danger" role="alert"style="width: 50%; text-align: center;""><p>Unfortunately the requested amount of blood is not available in '.$city.'.</p>';
+                                    echo '<a href="../enquire.html"><button class="btn btn-outline-danger">Click to go back</button></a></div>';
                                 }
                                 else{
-                                    header("Location: ../enquire.html");
-                                } 
-                            ?>
-                                       
+                                    echo '<div class="alert alert-success" role="alert" style="width: 50%; text-align: center;"">';
+                                    echo '<p>The blood type '.$type.' is available in '.$city.'.</p>';
+                                    echo '<a href="../index.html"><button class="btn btn-outline-success">Click to go back</button></a></div>';
+                                }
+                            }
+                            else{
+                                header("Location: ../enquire.html");
+                            } 
+                        ?>                                       
                 </div>
             </div>
         </div>
-        </form>
+        
         <div class="footer bg-danger">
             <p style="padding: 5px 5px 1px 5px;">© 2020 DrizzleWebs</p>
         </div>

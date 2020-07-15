@@ -64,7 +64,8 @@
                             $qryobj = mysqli_query($connection, $query);                            
                             
                             if(isset($qryobj)){
-                                echo "Deleted!";
+                                echo "Deleted!<br>";
+                                echo '<a href="adminHome.php"><button class="btn btn-outline-danger">Click to go back</button></a></div>';
                             }
                             else{
                                 echo "Error deleting record.";

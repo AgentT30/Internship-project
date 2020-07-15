@@ -55,7 +55,7 @@
                 </ul>
             </div>
         </nav>
-        <form method="GET" action="../backend/donate.php">
+       
         <div class="container-fluid">
             <div class="row" style="margin-left: 30%; margin-top: 20%;">
                 <div class="col col-lr-12">
@@ -101,6 +101,7 @@
 
                                 $ticket = "DNT10000".$ticket_num;                                
                                 echo '<p>Thank you for the interest in donating! Here is your ticket:<br>'.$ticket.'</p>';
+                                echo '<a href="../index.html"><button class="btn btn-outline-success">Click to go back</button></a>';
                         }
                         else{
                            header("Location: ../donate.html");
@@ -111,7 +112,6 @@
                     </div>
                 </div>
             </div>
-            </form>
             <div class="footer bg-danger">
                 <p style="padding: 5px 5px 1px 5px;">© 2020 DrizzleWebs</p>
             </div>
