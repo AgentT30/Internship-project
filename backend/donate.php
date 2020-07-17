@@ -101,6 +101,7 @@
 
                                 $ticket = "DNT10000".$ticket_num;                                
                                 echo '<p>Thank you for the interest in donating! Here is your ticket:<br>'.$ticket.'</p>';
+                                echo 'Please present this ticket at our local bloodbank in '.$city.' our staff will guide you from there.';
                                 echo '<a href="../index.html"><button class="btn btn-outline-success">Click to go back</button></a>';
                         }
                         else{
