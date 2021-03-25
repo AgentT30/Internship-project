@@ -134,7 +134,7 @@
                 echo '<td>'.$row['amount'].'</td>';
                 echo '<td>'.$row['user_address'].'</td>';
                 echo '<td>'.$row['city'].'</td>';                  
-                echo '<td><a href="deleterequest.php?id='.$row['id'].'">Delete this Record</a></td>';
+                echo '<td><a href="deleterequest.php?id='.$row['id'].'"><button class="btn btn-outline-danger">Delete this Record</button></a></td>';
                 echo '</tr>';
               }
           ?>          
@@ -182,7 +182,7 @@
               echo '<td>'.$row['city'].'</td>';
               echo '<td>'.$row['age'].'</td>';
               echo '<td>'.$row['gender'].'</td>';
-              echo '<td><a href="deletedonor.php?did='.$row['did'].'">Delete this Record</a></td>';
+              echo '<td><a href="deletedonor.php?did='.$row['did'].'"><button class="btn btn-outline-danger">Delete this Record</button></a></td>';
               echo '</tr>';
             }
           ?>
@@ -216,7 +216,7 @@
               echo '<td>'.$row['blood_type'].'</td>';
               echo '<td>'.$row['amount'].'</td>';
               echo '<td>'.$row['city'].'</td>';
-              echo '<td><a href="deleteblood.php?bid='.$row['bid'].'">Delete this Record</a></td>';
+              echo '<td><a href="deleteblood.php?bid='.$row['bid'].'"><button class="btn btn-outline-danger">Delete this Record</button></a></td>';
               echo '</tr>';
             }
             
