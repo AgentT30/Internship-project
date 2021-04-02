@@ -70,7 +70,7 @@
                             
                             //    echo '<script>window.location.href = "../thankYou.html";</script>';
                             $connection = mysqli_connect("localhost","root","","bloodbank");
-                            $query = "INSERT into newsletter(email) values ('.$email.')";
+                            $query = "INSERT into newsletter(email) values ('$email')";
 
                             $result = mysqli_query($connection, $query);
                             echo '<p>Thank you for signing up for our newsletter.<a href="../index.html#newsletter">Click here go back.</a></p>';
