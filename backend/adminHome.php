@@ -1,3 +1,24 @@
+<?php                            
+    if(isset($_POST['submit']) || !empty($_POST['submit'])){
+        $id = $_POST['logininid'];
+        $pass = $_POST['password'];
+
+        $username = 'admin123';
+        $password = "admin123";
+
+        if(($id == $username) && ($pass == $password)){
+            
+        }
+        else{
+            echo 'Incorrect username or password!<br><br>';
+            echo '<a href="../adminLogin.html"><button class="btn btn-outline-secondary">Click to go back</button></a>';                                
+        }
+    }
+    else{
+        header("Location:../adminLogin.html");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,6 +81,13 @@
           </li>
         </ul>
         
+        <ul class="navbar-nav mr-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="../adminLogin.html" style="color: white;"
+                >Logout</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -71,22 +99,17 @@
     
     <form action="adminHome.php" method="GET">
       <div class="container">
-        <div class="row" >
-          <div class="col col-lg-6">
-            <button class="btn btn-danger" style="margin-left: 30%" name = "refresh">Refresh</button> 
-          </div> 
-          <div class="col col-lg-6">          
-            <button class="btn btn-danger" style="margin-left: 30%" name = "update">Update Records</button>
-          </div>
+        <div class="row">     
+            <div class="col col-lg-5"></div>     
+                <div class="col col-lg-2">          
+                    <button class="btn btn-danger" name = "update">Update Records</button>
+                </div>
+          <div class="col col-lg-5"></div> 
         </div>
       </div>
     </form>
 
-    <?php
-        if(isset($_GET['refresh'])){
-          header("Location:adminHome.php");
-        }
-    ?>
+    
 
     <?php
       if(isset($_GET['update'])){

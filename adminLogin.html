@@ -60,12 +60,12 @@
             Welcome Admin!
         </h2>
         <div class="container container-admin-login">
-            <form action="backend/adminLogin.php" method="POST">
+            <form action="backend/adminHome.php" method="POST">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Username</label>
                     <input
                         type="text"
-                        class="form-control"
+                        class="form-control usernameForLogin"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
                         name="logininid"
@@ -76,7 +76,7 @@
                     <label for="exampleInputPassword1">Password</label>
                     <input
                         type="password"
-                        class="form-control"
+                        class="form-control passwordForLogin"
                         id="exampleInputPassword1"
                         name="password"
                         required=""
@@ -86,7 +86,8 @@
                     type="submit"
                     class="btn btn-danger"
                     style="margin: 20px 110px 0px 110px;"
-                    name="submit"
+                    name="submit" 
+                                      
                 >
                     Submit
                 </button>
@@ -112,4 +113,10 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"
     ></script>
+
+    <script>
+        $( document ).ready( function(){
+            history.pushState(null,  document.title, location.href);        
+        });
+    </script>
 </html>

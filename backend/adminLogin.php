@@ -17,7 +17,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-            <a class="navbar-brand" href="index.html"
+            <a class="navbar-brand" href="../index.html"
                 ><img src="../images/blood-bank-logo.jpg" height="40px" width="50px" class="logo"
             /></a>
             <button
@@ -63,8 +63,8 @@
                         role="alert"
                         style="width: 50%; text-align: center;"">
                         
-                        <?php
-                            if(isset($_POST['submit'])){
+                        <?php                            
+                            if(isset($_POST['submit']) || !empty($_POST['submit'])){
                                 $id = $_POST['logininid'];
                                 $pass = $_POST['password'];
 
