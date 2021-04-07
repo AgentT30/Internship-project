@@ -10,8 +10,10 @@
             
         }
         else{
-            echo 'Incorrect username or password!<br><br>';
-            echo '<a href="../adminLogin.html"><button class="btn btn-outline-secondary">Click to go back</button></a>';                                
+          echo '<script type="text/javascript">'; 
+          echo 'alert("Invalid Credentials!");'; 
+          echo 'window.location.href = "../adminLogin.html";';
+          echo '</script>';                                
         }
     }
     else{
