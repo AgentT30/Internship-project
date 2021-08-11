@@ -45,7 +45,7 @@
   </head>
   <body>    
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-      <a class="navbar-brand" href="index.html"
+      <a class="navbar-brand" href="../index.html"
         ><img
           src="../images/blood-bank-logo.jpg"
           height="40px"
